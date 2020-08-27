@@ -7,43 +7,36 @@
 
 <ion-grid style="height:100%">
 
-  <ion-row justify-content-center align-items-center  class="login-box-centered ">
-    <ion-card >
+  <ion-row justify-content-center align-items-center class="login-box-centered ">
+    <ion-card>
       <form>
         <ion-list>
-        <div class="center">
+          <div class="center">
 
-          <div heading-column-1r>
-            <img class="logo-img" src="assets/img/logo.png">
+            <div heading-column-1r>
+              <img class="logo-img" src="assets/img/logo.png">
+            </div>
+            <h2 big-heading>INCIDENCIAS</h2>
+
+            <ion-card-content>
+              <ion-item transparent>
+                <ion-icon src="assets/img/person-outline.svg" slot="start"></ion-icon>
+                <ion-input placeholder="Usuario" type="text"></ion-input>
+              </ion-item>
+
+              <ion-item transparent>
+                <ion-icon src="assets/img/lock-closed-outline.svg" slot="start"></ion-icon>
+                <ion-input placeholder="Contraseña" type="password"></ion-input>
+              </ion-item>
+
+              <ion-button expand="block">Ingresar</ion-button>
+
+              <a style="margin:auto; font-size: 14px;text-align:right; display:block;" drouterLink='/'>¿Olvidaste tu
+                contraseña?</a>
+            </ion-card-content>
+
           </div>
-          <h2 big-heading>INCIDENCIAS</h2>
-
-          <ion-card-content>
-            <ion-item transparent>
-              <ion-icon src="assets/img/person-outline.svg" slot="start"></ion-icon>
-              <ion-input placeholder="Usuario" type="text"></ion-input>
-            </ion-item>
-
-            <ion-item transparent>
-              <ion-icon src="assets/img/lock-closed-outline.svg" slot="start"></ion-icon>
-              <ion-input placeholder="Contraseña" type="password"></ion-input>
-            </ion-item>
-
-            <ion-button expand="block">Ingresar</ion-button>
-
-
-
-
-            <a style="margin:auto; font-size: 14px;text-align:right; display:block;" drouterLink='/'>¿Olvidaste tu
-              contraseña?</a>
-
-
-
-
-          </ion-card-content>
-
-        </div>
-      </ion-list>
+        </ion-list>
       </form>
     </ion-card>
   </ion-row>
