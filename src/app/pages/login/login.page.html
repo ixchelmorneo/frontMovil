@@ -9,7 +9,8 @@
 
   <ion-row justify-content-center align-items-center class="login-box-centered ">
     <ion-card>
-      <form>
+
+      <form #form="ngForm" (ngSubmit)="login(form)" method="post">
         <ion-list>
           <div class="center">
 
@@ -21,15 +22,15 @@
             <ion-card-content>
               <ion-item transparent>
                 <ion-icon src="assets/img/person-outline.svg" slot="start"></ion-icon>
-                <ion-input placeholder="Usuario" type="text"></ion-input>
+                <ion-input [(ngModel)]="username" placeholder="Usuario" type="text" name="username"></ion-input>
               </ion-item>
 
               <ion-item transparent>
                 <ion-icon src="assets/img/lock-closed-outline.svg" slot="start"></ion-icon>
-                <ion-input placeholder="Contraseña" type="password"></ion-input>
+                <ion-input [(ngModel)]="password" placeholder="Contraseña" type="password" name="password"></ion-input>
               </ion-item>
 
-              <ion-button expand="block">Ingresar</ion-button>
+              <ion-button type="submit" expand="block">Ingresar</ion-button>
 
               <a style="margin:auto; font-size: 14px;text-align:right; display:block;" drouterLink='/'>¿Olvidaste tu
                 contraseña?</a>
