@@ -21,7 +21,7 @@ export class LoginService {
 
   
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private storage:NativeStorage) { }
 
   /*login(credentials): Observable<any> {
     return this.http.post(AUTH_API + 'signin', {
@@ -34,41 +34,7 @@ export class LoginService {
   login(password:string,username:string){
     console.log(username+password)
     return this.http.post(AUTH_API + 'signin',{username:username,password:password},httpOptions)
-    
-    
-    /*
-    pipe(
-      tap(token => {
-        this.storage.setItem('token', token)
-        .then(
-          () => {
-            console.log('Token Stored');
-          },
-          error => console.error('Error storing item', error)
-        );
-        this.token = token;
-        this.isLoggedIn = true;
-        return token;
-      }),
-    );*/
+   
   }
-
-  /*getToken() {
-    return this.storage.getItem('token').then(
-      data => {
-        this.token = data;
-        if(this.token != null) {
-          this.isLoggedIn=true;
-        } else {
-          this.isLoggedIn=false;
-        }
-      },
-      error => {
-        this.token = null;
-        this.isLoggedIn=false;
-      }
-    );
-  }*/
-
   
 }

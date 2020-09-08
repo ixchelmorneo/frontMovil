@@ -22,12 +22,12 @@
             <ion-card-content>
               <ion-item transparent>
                 <ion-icon src="assets/img/person-outline.svg" slot="start"></ion-icon>
-                <ion-input [(ngModel)]="username" placeholder="Usuario" type="text" name="username"></ion-input>
+                <ion-input required [(ngModel)]="username" placeholder="Usuario" type="text" name="username"></ion-input>
               </ion-item>
 
               <ion-item transparent>
                 <ion-icon src="assets/img/lock-closed-outline.svg" slot="start"></ion-icon>
-                <ion-input [(ngModel)]="password" placeholder="Contraseña" type="password" name="password"></ion-input>
+                <ion-input required [(ngModel)]="password" placeholder="Contraseña" type="password" name="password"></ion-input>
               </ion-item>
 
               <ion-button type="submit" expand="block">Ingresar</ion-button>

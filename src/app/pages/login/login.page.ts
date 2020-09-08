@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
     this.loginService.login(this.password,this.username).subscribe(
       data => {
         console.log(data);
-        console.log(JSON.parse(data.accessToken));
+        console.log(data.accessToken);
         //this.alertService.presentToast("Logueado");
       }/*,
       error => {
