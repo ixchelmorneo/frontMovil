@@ -3,6 +3,7 @@ import {NgForm} from '@angular/forms'
 import {LoginService} from 'src/app/services/login.service'
 import { ModalController, NavController } from '@ionic/angular';
 import { AlertService } from 'src/app/services/alert.service';
+import { LoginUsuario } from 'src/app/models/LoginUsuario';
 
 
 @Component({
@@ -13,6 +14,8 @@ import { AlertService } from 'src/app/services/alert.service';
 export class LoginPage implements OnInit {
   username:string="martinez";
   password:string="123456";
+  usuario:LoginUsuario;
+  
 
   constructor(
     private modalController: ModalController,
@@ -29,20 +32,22 @@ export class LoginPage implements OnInit {
   }
 
   login(form:NgForm) {
-    console.log(this.username);
-    console.log(this.password);
-    this.loginService.login(this.password,this.username).subscribe(
+    //console.log(this.username);
+    //console.log(this.password);
+    this.usuario=new LoginUsuario(this.password,this.username);
+    //console.log(this.usuario);
+    this.loginService.login(this.usuario).subscribe(
       data => {
-        console.log(data);
-        console.log(data.accessToken);
-        //this.alertService.presentToast("Logueado");
-      }/*,
+        console.log(JSON.stringify(data));
+        //console.log(data.accessToken);
+        this.alertService.presentToast("Logueado");
+      },
       error => {
         console.log(error);
-      },
+      }/*,
       () => {
         this.dismissLogin();
-        this.navCtrl.navigateRoot('/inicio');
+        this.navCtrl.navigateRoot('/login');
       }*/
     );
   }
