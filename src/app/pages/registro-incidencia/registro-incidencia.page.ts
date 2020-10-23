@@ -11,14 +11,18 @@ import { ServiciosService } from '../../servicios.service';
 export class RegistroIncidenciaPage implements OnInit {
 
   
+  dateInicio;
+  dataTermino;
   descripcion;
   latitud;
   longitud;
   nivelRiesgo;
+  publico;
   tipoAlarma;
   tipoIncidencia;
   titulo;
-  username;
+
+  
 
 
 
@@ -31,14 +35,16 @@ export class RegistroIncidenciaPage implements OnInit {
     console.log("prueba");
 
     const dataFormulario = {
+      for_dateInicio: this.dateInicio, 
+      for_dateTermino: this.dataTermino,
       for_descripcion: this.descripcion,
       for_latitud: this.latitud,
       for_longitud: this.longitud,
       for_nivelRiesgo: this.nivelRiesgo,
+      for_publico: this.publico,
       for_tipoAlarma: this.tipoAlarma,
       for_tipoIncidencia: this.tipoIncidencia,
-      for_titulo: this.titulo,
-      for_username: this.username
+      for_titulo: this.titulo
       
     }
 

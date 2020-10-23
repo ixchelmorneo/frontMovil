@@ -16,6 +16,21 @@
         <ion-list-header>
           <ion-label>Formulario</ion-label>
         </ion-list-header>
+
+
+        <ion-item>
+          <ion-label position="Floating">dateInicio,</ion-label>
+          <ion-input type="text" [(ngModel)]="dateInicio"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label position="Floating">dataTermino</ion-label>
+          <ion-input type="text" [(ngModel)]="dataTermino"></ion-input>
+        </ion-item>
+
+
+
         <ion-item>
           <ion-label position="Floating">Descripcion</ion-label>
           <ion-input type="text" [(ngModel)]="descripcion"></ion-input>
@@ -37,6 +52,15 @@
         </ion-item>
 
         <ion-item>
+          <ion-label position="Floating">Publico</ion-label>
+          <ion-input type="text" [(ngModel)]="publico"></ion-input>
+        </ion-item>
+
+
+
+
+
+        <ion-item>
           <ion-label position="Floating">Tipo Alarma</ion-label>
           <ion-input type="text" [(ngModel)]="tipoAlarma"></ion-input>
         </ion-item>
@@ -51,12 +75,7 @@
           <ion-input type="text" [(ngModel)]="titulo"></ion-input>
         </ion-item>
 
-        <ion-item>
-          <ion-label position="Floating">User Name</ion-label>
-          <ion-input type="text" [(ngModel)]="username"></ion-input>
-        </ion-item>
-
-
+        
 
       </ion-list>
     </ion-col>
