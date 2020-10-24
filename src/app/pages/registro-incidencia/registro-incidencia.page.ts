@@ -35,16 +35,16 @@ export class RegistroIncidenciaPage implements OnInit {
     console.log("prueba");
 
     const dataFormulario = {
-      for_dateInicio: this.dateInicio, 
-      for_dateTermino: this.dataTermino,
-      for_descripcion: this.descripcion,
-      for_latitud: this.latitud,
-      for_longitud: this.longitud,
-      for_nivelRiesgo: this.nivelRiesgo,
-      for_publico: this.publico,
-      for_tipoAlarma: this.tipoAlarma,
-      for_tipoIncidencia: this.tipoIncidencia,
-      for_titulo: this.titulo
+      for_dateInicio: '2020-10-21T05:30', 
+      for_dateTermino: '2020-10-21T05:30',
+      for_descripcion: 'Celular',
+      for_latitud: 9,
+      for_longitud: 9,
+      for_nivelRiesgo: 'Alto',
+      for_publico: 'true',
+      for_tipoAlarma: 'boton',
+      for_tipoIncidencia: 'INCIDENCIA_ROBO',
+      for_titulo: 'Robo'
       
     }
 

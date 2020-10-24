@@ -26,16 +26,19 @@ export class ServiciosService {
 
 
  //Enviar Formulario NECESITO LA URL  (o declarar una variable asignarla y pegarl adirectamente )
-//https://incidencias-servicio-backend.herokuapp.com/api/  <- incidencia
+//https://incidencias-servicio-backend.herokuapp.com/api/incidencia
  enviarFormulario(datosFormulario){
-
+/*
   const httpOptions = {
     headers: new HttpHeaders({
-        'Authorization': 'Bearer ' + 'eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJpeGNoZWwiLCJpYXQiOjE2MDMyMzg5NjQsImV4cCI6MTgwNDc3ODk2NH0.C3H9ZltKroDTL3yGpcsesGb5EGZD-z_gM5QZKXmm6kjIWgoOf2dMoSHVSG2ON8DZ26t5M1QZZ20Lm5XPEaqb1WUrHTAYN0gxvXiXbt9qfzBSGlj-CGZIpWeiJon-IAFbLd99a9k2XR-2xuD8YWbw8WeNZG-z-YMb1CGw3R_53-NPXjxCtRCLjlx8nPwajOeH4aOGfL-xgAxmoJwsEIzZv6Pvp0XXBIJe2j-lgbGo4XLZkA0Ba9YagpDK3bqMUUUZD_S_aASNhxtHm0IZPyg75OUNdDkDQypNkePEbX4rPMwdd-XGtqCXPRthvw56chz4-Cm-uGMBQ-EcvMaiFxCOcg'
+        'Authorization': 'Bearer ' + 'eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJpeGNoZWwiLCJpYXQiOjE2MDM1MDYxNjEsImV4cCI6MTgwNTA0NjE2Mn0.e7OqU0-83b7PlxbvywurLJdEM5Nge0W7IEUq2Eye5ZTokpvT30GKuEvuriOps7a2Ln7IwRtm5dn1p8BAhp47BPfTKHjEHzd9pt06Fk7QlTCFKLHdLTk3nxiRqstK2Xvg5K812C49nMgooDmqcmj5bcMyLWHRGCsPh9o95jDQ-Tdu4uoPfTakGABWzI3SRY9Y4C691iOp0ThOBtN_rniRsrYISHGHZAc6NRYtdRmY78LwDGDFPylDXlmlp5KzcgJedm_-Lzwttb8d0VeZELlnTU8VYeW7BWtJpQK-Yxml9vk9WZMxQ4lka-kuwNirnA0hjfX2JlGltSZGn_TNaqKxrg'
     })
   };
+*/
+   return this.http.post(environment.url + 'incidencia', datosFormulario, {headers: new HttpHeaders().set('Authorization', 'Bearer ' + 'eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJpeGNoZWwiLCJpYXQiOjE2MDM1MDYxNjEsImV4cCI6MTgwNTA0NjE2Mn0.e7OqU0-83b7PlxbvywurLJdEM5Nge0W7IEUq2Eye5ZTokpvT30GKuEvuriOps7a2Ln7IwRtm5dn1p8BAhp47BPfTKHjEHzd9pt06Fk7QlTCFKLHdLTk3nxiRqstK2Xvg5K812C49nMgooDmqcmj5bcMyLWHRGCsPh9o95jDQ-Tdu4uoPfTakGABWzI3SRY9Y4C691iOp0ThOBtN_rniRsrYISHGHZAc6NRYtdRmY78LwDGDFPylDXlmlp5KzcgJedm_-Lzwttb8d0VeZELlnTU8VYeW7BWtJpQK-Yxml9vk9WZMxQ4lka-kuwNirnA0hjfX2JlGltSZGn_TNaqKxrg')}   );
 
-   return this.http.post(environment.url + 'incidencia', datosFormulario,  httpOptions );
+   
+
  }
 
 
