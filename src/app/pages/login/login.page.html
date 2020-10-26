@@ -1,9 +1,44 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
+<ion-header no-border>
+  <div class="login-header ion-padding">
+    <img class="logo-img" src="assets/img/logo.jpg">
+
+  </div>
 </ion-header>
 
-<ion-content>
+<ion-grid style="height:100%">
 
-</ion-content>
+  <ion-row justify-content-center align-items-center class="login-box-centered ">
+    <ion-card>
+
+      <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+        <ion-list>
+          <div class="center">
+
+            <div heading-column-1r>
+              <img class="logo-img" src="assets/img/logo.png">
+            </div>
+            <h2 big-heading>INCIDENCIAS</h2>
+
+            <ion-card-content>
+              <ion-item transparent>
+                <ion-icon src="assets/img/person-outline.svg" slot="start"></ion-icon>
+                <ion-input required [(ngModel)]="username" placeholder="Usuario" type="text" name="username"></ion-input>
+              </ion-item>
+
+              <ion-item transparent>
+                <ion-icon src="assets/img/lock-closed-outline.svg" slot="start"></ion-icon>
+                <ion-input required [(ngModel)]="password" placeholder="Contraseña" type="password" name="password"></ion-input>
+              </ion-item>
+
+              <ion-button type="submit" expand="block">Ingresar</ion-button>
+
+              <a style="margin:auto; font-size: 14px;text-align:right; display:block;" drouterLink='/'>¿Olvidaste tu
+                contraseña?</a>
+            </ion-card-content>
+
+          </div>
+        </ion-list>
+      </form>
+    </ion-card>
+  </ion-row>
+</ion-grid>
