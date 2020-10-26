@@ -11,10 +11,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { HttpClientModule }    from '@angular/common/http';
 
+// HttpClienteModule
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
+<<<<<<< HEAD
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
+=======
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+>>>>>>> 976c9a205b44c592976b6ecbc10795bf4a46b4cf
   providers: [
     StatusBar,
     SplashScreen,

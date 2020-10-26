@@ -1,9 +1,92 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registroIncidencia</ion-title>
+    <ion-title>registro-incidencia</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+{{data}}
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Formulario</ion-label>
+        </ion-list-header>
+
+
+        <ion-item>
+          <ion-label>D MMM YYYY H:mm</ion-label>
+          <ion-datetime displayFormat="YYYY MM DD H:mm" max="2010" value="2005-06-17T11:06Z" ></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>D MMM YYYY H:mm</ion-label>
+          <ion-datetime displayFormat="YYYY MM DD H:mm" max="2010" value="2005-06-17T11:06Z" ></ion-datetime>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label position="Floating">Descripcion</ion-label>
+          <ion-input type="text" [(ngModel)]="descripcion"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="Floating">Latitud</ion-label>
+          <ion-input type="text" [(ngModel)]="latitud"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="Floating">Longitud</ion-label>
+          <ion-input type="text" [(ngModel)]="longitud"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="Floating">Nivel Riesgo</ion-label>
+          <ion-input type="text" [(ngModel)]="nivelRiesgo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="Floating">Publico</ion-label>
+          <ion-input type="text" [(ngModel)]="publico"></ion-input>
+        </ion-item>
+
+
+
+
+
+        <ion-item>
+          <ion-label position="Floating">Tipo Alarma</ion-label>
+          <ion-input type="text" [(ngModel)]="tipoAlarma"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="Floating">Tipo Incidencia</ion-label>
+          <ion-input type="text" [(ngModel)]="tipoIncidencia"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="Floating">Titulo</ion-label>
+          <ion-input type="text" [(ngModel)]="titulo"></ion-input>
+        </ion-item>
+
+        
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+<ion-row>
+  <ion-col>
+    <ion-button expand="block" (click)="enviarDatos()">Enviar</ion-button>
+  </ion-col>
+</ion-row>
+
+</ion-grid>
+
+  
 
 </ion-content>
